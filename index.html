@@ -13,12 +13,12 @@
 <body>
 
 <!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
+<!-- <div class="device-notification">
   <a class="device-notification--logo" href="#0">
     <img src="https://img.icons8.com/?size=100&id=igYV9I849M8k&format=png&color=000000" alt="Global">
     <p>kumar</p>
   </a>
-</div>
+</div> -->
 
 <div class="perspective effect-rotate-left">
   <div class="container"><div class="outer-nav--return"></div>
@@ -211,11 +211,12 @@
                   </ul>
                 </div> -->
                 <!-- <li class="l-section section"> -->
-    <div class="container">
+    <div class="container" id="send-mail">
       <!-- Contact section -->
       <div class="contact-section">
         <!-- Contact left -->
         <div class="contact-left">
+          <div id="send-mail-contents">
           <div class="address">
             <i class="fa-solid fa-location-dot"></i>
             <h4 class="title">Address</h4>
@@ -231,69 +232,18 @@
           <div class="email">
             <i class="fa-solid fa-envelope"></i>
             <h4 class="title">Email</h4>
-            <p class="detail">thesenthil2105.com</p>
+            <p class="detail">thesenthil2105@gmail.com</p>
+            <a href="mailto:thesenthil2105@gmail.com"><button class="mail-button">send mail</button></a>
           </div>
         </div>
-        <!-- Contact right -->
-        <div class="contact-right">
-          <h2 class="title">Send A Message</h2>
-          <form id="contactForm">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              id="message"
-              rows="4"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit">Send Message</button>
-          </form>
         </div>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-          emailjs.init("hzqgwekm74rsGlvIg");
-        
-          document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-        
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-        
-            const templateParams = {
-              name: name,
-              email: email,
-              message: message,
-            };
-        
-            emailjs
-              .send('service_6wjidue', 'template_fxi25f5', templateParams)
-              .then(
-                function (response) {
-                  alert('Message sent successfully!');
-                  console.log('SUCCESS!', response.status, response.text);
-                },
-                function (error) {
-                  alert('Failed to send the message. Please try again later.');
-                  console.error('FAILED...', error);
-                }
-              );
-          });
-        </script>
-        
+        <!-- Contact right -->
+        <!-- <div class="contact-right">
+          <h2 class="title">Send A Message</h2>
+          <a href="thesenthil2105@gmail.com" style="color: aqua;"></a>         
+          
+        </div> -->
+      
       </div>
     </div>
   <!-- </li> -->
